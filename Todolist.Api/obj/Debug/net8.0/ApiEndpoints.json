@@ -1,5 +1,47 @@
 [
   {
+    "ContainingType": "Todolist.Api.Controllers.TodosController",
+    "Method": "BulkCreate",
+    "RelativePath": "api/Todos/BulkCreate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "todoData",
+        "Type": "System.Collections.Generic.List\u00601[[Todolist.Api.Models.DTO.CreateTodosDto, Todolist.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todolist.Api.Controllers.TodosController",
+    "Method": "GetAll",
+    "RelativePath": "api/Todos/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todolist.Api.Controllers.TodosController",
+    "Method": "GetByUserId",
+    "RelativePath": "api/Todos/GetByUserId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Todolist.Api.Controllers.UserController",
     "Method": "Create",
     "RelativePath": "api/User/Create",

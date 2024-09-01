@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Todolist.Api.Models.Data;
+using Todolist.Api.Repos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+
+// Add scope for interface implementation
+builder.Services.AddScoped<IUserRepo, SqlUserRepo>();
+builder.Services.AddScoped<ITodos, SqlTodosRepo>();
 
 var app = builder.Build();
 
